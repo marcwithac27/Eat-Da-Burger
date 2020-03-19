@@ -1,9 +1,9 @@
 $(function() {
     $(".change-devoured").on("click", function(event) {
-      var id = $(this).data("id");
-      var newDevoured = $(this).data("newdevoured");
+      const id = $(this).data("id");
+      const newDevoured = $(this).data("newdevoured");
   
-      var newDevouredState = {
+      const newDevouredState = {
         devoured: newDevoured
       };
   
@@ -24,9 +24,9 @@ $(function() {
       // Make sure to preventDefault on a submit event.
       event.preventDefault();
   
-      var newBurger = {
+      const newBurger = {
         name: $("#ca").val().trim(),
-        devouredy: $("[name=devoured]:checked").val().trim()
+        devoured: $("[name=devoured]:checked").val().trim()
       };
   
       // Send the POST request.
@@ -43,7 +43,7 @@ $(function() {
     });
   
     $(".delete-burger").on("click", function(event) {
-      var id = $(this).data("id");
+      const id = $(this).data("id");
   
       // Send the DELETE request.
       $.ajax("/api/burgers/" + id, {
