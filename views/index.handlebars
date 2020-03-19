@@ -14,13 +14,13 @@
 <h2 class="h2"><i class="fas fa-hamburger">Burgers Devoured</i></h2>
 
 <ul class="list-group">
-  <li class="list-group-item">
+  
   {{#each burgers}}
     {{#if devoured}}
       {{> burger/burger-block devoured=false}}
     {{/if}}
   {{/each}}
-  </li>
+  
 </ul>
 
 <h2 class="h2"><i class="fal fa-cheeseburger">Add Burger</i></h2>
